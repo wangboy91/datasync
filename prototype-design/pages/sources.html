@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>数据源管理</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="sources">
+  <header class="topbar">
+    <div class="brand">DataSync 原型</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">仪表盘</a>
+      <a href="sources.html" class="nav-link active">数据源</a>
+      <a href="targets.html" class="nav-link">目标库</a>
+      <a href="schema.html" class="nav-link">表结构</a>
+      <a href="rules-list.html" class="nav-link">规则</a>
+      <a href="execute.html" class="nav-link">执行</a>
+      <a href="jobs.html" class="nav-link">任务</a>
+      <a href="settings.html" class="nav-link">设置</a>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel">
+        <div class="panel-title">新增数据源</div>
+        <div class="form-row">
+          <select class="select">
+            <option>MySQL</option>
+            <option>PostgreSQL</option>
+            <option>SQLServer</option>
+            <option>Oracle</option>
+            <option>MongoDB</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input class="input" placeholder="连接字符串">
+        </div>
+        <div class="form-row">
+          <input class="input" placeholder="库/Schema（可选）">
+        </div>
+        <div class="table-actions">
+          <button class="btn" id="btn-test-source">测试连接</button>
+          <span id="test-source-result" class="status-badge">待测试</span>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel-title">数据源列表</div>
+        <ul id="source-list" style="list-style:none;padding:0;margin:0"></ul>
+      </section>
+      <aside class="panel">
+        <div class="panel-title">操作</div>
+        <div class="table-actions">
+          <a class="btn secondary" href="schema.html">拉取表结构</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="../app.js"></script>
+</body>
+<!-- *** End of File -->

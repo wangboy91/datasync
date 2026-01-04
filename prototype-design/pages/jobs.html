@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>任务与历史</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="jobs">
+  <header class="topbar">
+    <div class="brand">DataSync 原型</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">仪表盘</a>
+      <a href="sources.html" class="nav-link">数据源</a>
+      <a href="targets.html" class="nav-link">目标库</a>
+      <a href="schema.html" class="nav-link">表结构</a>
+      <a href="rules-list.html" class="nav-link">规则</a>
+      <a href="execute.html" class="nav-link">执行</a>
+      <a href="jobs.html" class="nav-link active">任务</a>
+      <a href="settings.html" class="nav-link">设置</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="panel">
+      <div class="panel-title">任务列表</div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>规则</th>
+              <th>触发</th>
+              <th>开始</th>
+              <th>结束</th>
+              <th>状态</th>
+              <th>记录数</th>
+            </tr>
+          </thead>
+          <tbody id="jobs-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="../app.js"></script>
+</body>
+<!-- *** End of File -->

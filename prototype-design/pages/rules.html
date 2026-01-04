@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>同步规则配置</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="rules">
+  <header class="topbar">
+    <div class="brand">DataSync 原型</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">仪表盘</a>
+      <a href="sources.html" class="nav-link">数据源</a>
+      <a href="targets.html" class="nav-link">目标库</a>
+      <a href="schema.html" class="nav-link">表结构</a>
+      <a href="rules-list.html" class="nav-link">规则</a>
+      <a href="execute.html" class="nav-link">执行</a>
+      <a href="jobs.html" class="nav-link">任务</a>
+      <a href="settings.html" class="nav-link">设置</a>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel">
+        <div class="panel-title">选择源与目标</div>
+        <div class="form-row">
+          <select id="rule-source" class="select"></select>
+        </div>
+        <div class="form-row">
+          <select id="rule-source-table" class="select"></select>
+        </div>
+        <div class="form-row">
+          <select id="rule-target" class="select"></select>
+        </div>
+        <div class="form-row">
+          <select id="rule-target-table" class="select"></select>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel-title">字段映射</div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>源字段</th>
+                <th>目标字段</th>
+                <th>转换</th>
+                <th>默认值</th>
+                <th>重复判定</th>
+              </tr>
+            </thead>
+            <tbody id="map-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+      <aside class="panel">
+        <div class="panel-title">同步策略</div>
+        <div class="form-row">
+          <select class="select">
+            <option>全量</option>
+            <option>增量</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <select id="conflict-mode" class="select">
+            <option>覆盖</option>
+            <option>跳过</option>
+            <option>合并</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input class="input" placeholder="批大小">
+        </div>
+        <div class="form-row">
+          <input class="input" placeholder="并发度">
+        </div>
+        <div class="table-actions">
+          <button id="btn-save-rule" class="btn">保存规则</button>
+        </div>
+      </aside>
+    </div>
+    <section class="panel" style="margin-top:16px">
+      <div class="panel-title">合并策略</div>
+      <div class="form-row">
+        <div style="width:100%">
+          <div style="margin-bottom:8px;color:#5a5f66">字段级策略（当冲突处理选择“合并”时生效）</div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead><tr><th>目标字段</th><th>策略</th></tr></thead>
+              <tbody id="merge-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../app.js"></script>
+</body>
+<!-- *** End of File -->

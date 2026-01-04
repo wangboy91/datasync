@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>规则列表</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="rules-list">
+  <header class="topbar">
+    <div class="brand">DataSync 原型</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">仪表盘</a>
+      <a href="sources.html" class="nav-link">数据源</a>
+      <a href="targets.html" class="nav-link">目标库</a>
+      <a href="schema.html" class="nav-link">表结构</a>
+      <a href="rules-list.html" class="nav-link active">规则</a>
+      <a href="execute.html" class="nav-link">执行</a>
+      <a href="jobs.html" class="nav-link">任务</a>
+      <a href="settings.html" class="nav-link">设置</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="section">
+      <div class="section-header">
+        <h2>规则列表</h2>
+        <div class="section-actions">
+          <a class="btn" href="rules.html">新建规则</a>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>规则名</th>
+              <th>源库/表</th>
+              <th>目标库/表</th>
+              <th>模式</th>
+              <th>重复判定</th>
+              <th>合并策略摘要</th>
+              <th>最近状态</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="rules-list-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="../app.js"></script>
+</body>
+<!-- *** End of File -->

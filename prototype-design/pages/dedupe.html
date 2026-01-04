@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>重复判定规则</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="dedupe">
+  <header class="topbar">
+    <div class="brand">DataSync 原型</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">仪表盘</a>
+      <a href="sources.html" class="nav-link">数据源</a>
+      <a href="targets.html" class="nav-link">目标库</a>
+      <a href="schema.html" class="nav-link">表结构</a>
+      <a href="rules.html" class="nav-link">规则</a>
+      <a href="execute.html" class="nav-link">执行</a>
+      <a href="jobs.html" class="nav-link">任务</a>
+      <a href="settings.html" class="nav-link">设置</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="panel">
+      <div class="panel-title">规则配置</div>
+      <div class="form-row">
+        <select id="ddp-type" class="select">
+          <option>主键</option>
+          <option>唯一索引</option>
+          <option>组合键</option>
+          <option>表达式</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <input id="ddp-expr" class="input" placeholder="例如 id 或 email">
+      </div>
+      <div class="form-row">
+        <select class="select">
+          <option>更新现有</option>
+          <option>忽略</option>
+          <option>写入重复表</option>
+          <option>标记冲突</option>
+        </select>
+      </div>
+      <div class="table-actions">
+        <button class="btn">保存</button>
+      </div>
+    </section>
+  </main>
+  <script src="../app.js"></script>
+</body>
+<!-- *** End of File -->

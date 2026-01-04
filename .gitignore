@@ -1,0 +1,30 @@
+# .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# Node.js
+node_modules/
+dist/
+coverage/
+
+# Environment Variables
+.env
+.env.dev
+.env.pro
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+.trae/

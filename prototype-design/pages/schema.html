@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>表结构浏览</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="schema">
+  <header class="topbar">
+    <div class="brand">DataSync 原型</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">仪表盘</a>
+      <a href="sources.html" class="nav-link">数据源</a>
+      <a href="targets.html" class="nav-link">目标库</a>
+      <a href="schema.html" class="nav-link active">表结构</a>
+      <a href="rules-list.html" class="nav-link">规则</a>
+      <a href="execute.html" class="nav-link">执行</a>
+      <a href="jobs.html" class="nav-link">任务</a>
+      <a href="settings.html" class="nav-link">设置</a>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel">
+        <div class="panel-title">选择</div>
+        <div class="form-row">
+          <select id="schema-source" class="select"></select>
+        </div>
+        <div class="form-row">
+          <select id="schema-name" class="select"></select>
+        </div>
+        <div class="form-row">
+          <select id="schema-table" class="select"></select>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel-title">字段与索引</div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>字段名</th>
+                <th>类型</th>
+                <th>可空</th>
+                <th>默认</th>
+                <th>索引</th>
+              </tr>
+            </thead>
+            <tbody id="schema-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+      <aside class="panel">
+        <div class="panel-title">说明</div>
+        <div>选择源后自动加载可用的 Schema 与表。</div>
+      </aside>
+    </div>
+  </main>
+  <script src="../app.js"></script>
+</body>
+<!-- *** End of File -->

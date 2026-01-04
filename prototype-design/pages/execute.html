@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>执行与日志</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="execute">
+  <header class="topbar">
+    <div class="brand">DataSync 原型</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">仪表盘</a>
+      <a href="sources.html" class="nav-link">数据源</a>
+      <a href="targets.html" class="nav-link">目标库</a>
+      <a href="schema.html" class="nav-link">表结构</a>
+      <a href="rules-list.html" class="nav-link">规则</a>
+      <a href="execute.html" class="nav-link active">执行</a>
+      <a href="jobs.html" class="nav-link">任务</a>
+      <a href="settings.html" class="nav-link">设置</a>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel">
+        <div class="panel-title">手动触发</div>
+        <div class="form-row">
+          <select id="exec-rule" class="select"></select>
+        </div>
+        <div class="table-actions">
+          <button id="btn-run" class="btn">开始执行</button>
+        </div>
+        <div class="progress" style="margin-top:12px"><div id="progress-bar"></div></div>
+      </section>
+      <section class="panel">
+        <div class="panel-title">接口触发</div>
+        <div class="code" id="trigger-url"></div>
+        <div class="code" id="curl" style="margin-top:12px"></div>
+      </section>
+      <aside class="panel">
+        <div class="panel-title">运行统计</div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>指标</th><th>值</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>速率</td><td>— 行/秒</td></tr>
+              <tr><td>成功</td><td>—</td></tr>
+              <tr><td>失败</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="../app.js"></script>
+</body>
+<!-- *** End of File -->

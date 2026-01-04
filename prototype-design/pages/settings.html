@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>全局设置</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="settings">
+  <header class="topbar">
+    <div class="brand">DataSync 原型</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">仪表盘</a>
+      <a href="sources.html" class="nav-link">数据源</a>
+      <a href="targets.html" class="nav-link">目标库</a>
+      <a href="schema.html" class="nav-link">表结构</a>
+      <a href="rules-list.html" class="nav-link">规则</a>
+      <a href="execute.html" class="nav-link">执行</a>
+      <a href="jobs.html" class="nav-link">任务</a>
+      <a href="settings.html" class="nav-link active">设置</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="panel">
+      <div class="panel-title">运行参数</div>
+      <div class="form-row">
+        <input class="input" placeholder="并发度">
+        <input class="input" placeholder="批大小">
+      </div>
+      <div class="form-row">
+        <select class="select">
+          <option>重试 0 次</option>
+          <option>重试 1 次</option>
+          <option>重试 3 次</option>
+          <option>重试 5 次</option>
+        </select>
+        <input class="input" placeholder="告警 Webhook（可选）">
+      </div>
+      <div class="form-row">
+        <input class="input" placeholder="时区">
+        <input class="input" placeholder="时间格式">
+      </div>
+      <div class="table-actions">
+        <button class="btn">保存设置</button>
+      </div>
+    </section>
+  </main>
+  <script src="../app.js"></script>
+</body>
+<!-- *** End of File -->
